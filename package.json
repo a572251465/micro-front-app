@@ -1,0 +1,22 @@
+{
+  "name": "micro-front-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rollup -c rollup.base.config.js",
+    "dev": "rollup -c -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "eslint": "^8.18.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "rollup": "^2.75.7",
+    "rollup-plugin-del": "^1.0.1",
+    "rollup-plugin-serve": "^1.1.0"
+  }
+}
