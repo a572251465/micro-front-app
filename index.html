@@ -10,9 +10,19 @@
     <title>Document</title>
   </head>
   <body>
-    <script src='lib/index.umd.js'></script>
+    <script src="lib/index.umd.js"></script>
     <script>
-      console.log(MicroFrontApp)
+      microFrontApp.registerApplication([
+        {
+          name: 'app1',
+          entry: 'http://localhost:30001',
+          activeCond: '/vue',
+          container: "#vue",
+          customProps: {}
+        }
+      ])
+
+      microFrontApp.start()
     </script>
   </body>
 </html>
