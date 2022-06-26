@@ -40,3 +40,15 @@ export const isActive = (app) => {
 export const shouldBeActive = (app) => {
   return app.activeWhen(window.location)
 }
+
+/**
+ * @author lihh
+ * @description 生成promise 链
+ */
+export const genPromiseChain = (promises = []) => {
+  promises = Array.isArray(promises) ? promises : [promises]
+  return (props) =>
+    promises.reduce((memo, fn) => {
+      return memo.then(() => fn(props))
+    }, Promise.resolve())
+}
